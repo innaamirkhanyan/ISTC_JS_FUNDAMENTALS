@@ -1,0 +1,58 @@
+<script>
+
+function car(x){
+     if(x = "BMW"){
+     console.log("Meqenan BMW e")
+     }
+     else if(x = "Mercedes"){
+         console.log("Meqenan Mercedes e")
+     }
+  }
+  car("Volvo")  // 1. grel  if, else if -ov orinak, vortegh 1in paymany sxal e, 2rd paymany evs. inch output kunenanq? PATASXAN! Veradarcnum e arajin payman@
+    
+
+
+
+  function checkNumber(y){
+
+    if(y > 1000 ) {
+console.log("Too early");
+}
+else if (10 < y < 1000) {
+    console.log("Too Late");
+}
+    else {console.log("Exactly")
+    }                                //2. grel if, else if, else-ov orinak, vortegh 1in paymany sxal e, 2rd paymany chisht e, 3rd paymany chisht, e. Inch output kstacvi?  PATASXAN! 100 arjheqi depqum veradarcnum e arajin chisht payman@ 
+  }
+
+  checkNumber(undefined);
+
+function checkPhones (d){
+    if(d == "iphone" && "Samsung")
+    console.log("Smartphone");
+}
+checkPhones("iphone", "Samsung"); // 3. grel orinak, vortegh payamny klini && operator-ov  PATASXAN! "Miayn Samsungi depqum chi veradarcnum"
+
+function checkPhone (h){
+    if(h == "iphone" || "Samsung")
+    console.log("Smartphone1");
+}
+checkPhone("Samsung"); //  4. grel orinak, vortegh paymany klini || (kam) orinakov. PATASXAN! Miayan Samsungi depqum veradarcnum e, Bayc nayev veradarcnum e miasin grelu depqum 
+
+console.log(1 + 100 * 5)    // 5. inch klini outputy hetevyal artahaytutyunneri? returns 501
+console.log((1 + 100) * 5) // returns 505
+
+
+var person = {
+    fname: "John",
+    lname : "Doe",
+    age : function(q){
+        if(q > 18){
+            alert("string")
+        }
+    }}
+console.log(person.age(19))  // 6. grel object type-ov orinak, vori mej vorpes property kunenanq "tariq" , ete tariqy mets kam havasar e 18 , alert ani string
+
+
+ 
+</script>
