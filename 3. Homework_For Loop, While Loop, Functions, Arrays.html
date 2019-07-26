@@ -1,0 +1,226 @@
+<script>
+
+
+var str = ""
+
+for (var i = 0; i <= 5; i++){
+  str = str + i
+ }
+console.log(str)  // skzbnakan arjheq@ 0 e, payman ete skzbnakan arjheq@ <= 5, ayd arjheqin gumarel nra hajord@, 
+
+
+
+for (var i = 0; i <= 100; i++){
+    if (i == 10){
+       console.log("Es " + i + "-rd" + " " + " " +"tivn em")
+   }
+       else console.log(i) // loop anel 0-100 angam ev ete ayd @ntacqum i tiv@ havasar lini 10-i cuyc tal text@, hakarak depqum cuyc tal amen i-rd tiv@
+    
+ }
+
+ console.log("Task 1 " + "Functions") // Գտնել որևէ միջակայքում ընկած թվերի գումարը Function-ի մեջ For պայմանով աճման և նվազման կարգով՝  բաց թողնելով  այդ միջակայքի մեջ գտնվող կամայական թվից սկսվող և վերջացող միջակայք (edited)
+function countSum(){
+var a = 0;
+for (var i = 0; i < 10; i++){
+  a = a + i //Funciayi mej loop anel 0-10 angam ev ete i<10  a popoxakanin gumarel amen hajord loop eghac tiv@
+}
+
+var b = 0;
+for (var i = 15; i < 20; i++){
+  b = b + i     //Funciayi mej loop anel 0-10 angam ev ete i<10  b popoxakanin gumarel amen hajord loop eghac tiv@
+}
+ console.log(a+b) 
+}
+countSum() 
+
+
+console.log("Task 2") //Տպել՝ քանի օր է մնացել մինչև Սեպտեմբերի 1-ը՝ օգտվելով Date օբյեկտից
+
+
+function beforeSep(){
+var today = new Date();
+var september = new Date(2019, 08, 01);
+var result = Math.abs(today.getTime()-september.getTime());
+var final = Math.floor(result/(24*60*60*1000));
+console.log(final)                               
+}
+beforeSep(); 
+
+
+console.log("Task 3") //Տպել ամսվա բոլոր օրերը, ու տվյալ օրվա կողքը դնել + նշան՝ օգտվելով Date օբյեկտից
+
+var amis = new Date()
+var amsvaOrer = new Date(2019, 08, 0) // Amsva orer@ gtnelu tarberak
+for (var i = 0; i <= amsvaOrer.getDate(); i++){
+    if ( i == amis.getDate()){
+       console.log("Es " + i + "-rd" + " " + " " +"orn em")
+   }
+       else console.log(Math.floor(i)) // loop anel 0-100 angam ev ete ayd @ntacqum i tiv@ havasar lini 10-i cuyc tal text@, hakarak depqum cuyc tal amen i-rd tiv@
+    
+ }
+
+
+ console.log("Task 4.1") //Գտնել որևէ միջակայքում ընկած թվերի գումարը Function-ի մեջ For պայմանով աճման և նվազման կարգով 
+
+
+  function count (x, y){
+     for (x = 0; x < y; x++){
+         console.log(x + y)
+     }
+
+ }
+ count(1,10);
+
+ console.log("Task 4.2")
+
+ function countDegressive (a, b){
+     for(a = 10; a > b; a--){
+         console.log(a+b)
+     }
+ }
+ countDegressive(10, 1)
+
+ console.log("Task 5 " + "Arrays") //5. Գտնել ինդեքսները աճման կարգով while պայմանով
+
+
+var numbers = [4, 54 , 678, 57, 32, 22, 78, 79, 5, 43, 3];
+var i = 0
+while (i < numbers.length){
+    if(numbers[i] > numbers[i+1]){
+        var temp = numbers[i];
+        numbers[i] = numbers[i+1];
+        numbers[i+1] = temp;
+        i=-1;
+
+    }
+    else i++
+}
+console.log(numbers)
+
+
+
+console.log("Task 6") // 6. Գտնել ինդեքսները  աճման կարգով do  while պայմանով
+
+var numbersDo = [4, 54 , 678, 57, 32, 22, 78, 79, 5, 43, 3];
+var i = 0 
+do {
+    if(numbersDo[i] > numbersDo[i+1]){
+        var temp = numbersDo[i];
+        numbersDo[i] = numbersDo[i+1];
+        numbersDo[i+1] = temp;
+        i=-1;
+    }
+    else i++
+}
+while(i < numbersDo.length)
+console.log(numbersDo)
+
+
+console.log("Task 7") // 7. Գտնել թվի թվանշաններից ամենամեծը orinak 1283
+
+function max(x){
+    var tiv = x.toString();
+    var max = tiv[0];
+    for(var i = 0; i < tiv.length; i++){
+        if(tiv[i] > max){
+             max = tiv[i]
+        } 
+    }
+    return max
+}
+console.log(max(3409))
+
+console.log("Task 8") // 8. Տպել 0-10 միջակայքում ընկած թվերի բաժանարարների գումարը
+
+var mass = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function sum(arr){
+    var sum = 0
+    for(var i = 0; i < arr.length; i++){
+        for(var j = 0; j <= arr[i]; j++){
+            if(arr[i]%j == 0){
+                sum += j;
+            }
+        }
+    } return sum;
+}
+
+console.log(sum(mass))
+
+
+console.log("Task 10") // 10. Գրել ծրագիր, որը տրված թիվը կպտտի հակառակ 34225 => 52243
+
+function rev(x){
+    sum = "";
+    var tiv = x.toString();
+    for(var i = tiv.length-1; i >= 0; i--){
+        sum += tiv [i];
+        
+    } return sum 
+}
+console.log(rev(3405))
+
+
+
+console.log("Task 11") //  11. Տրված են 5 թվեր, որպես input-ներ։ Հաշվել և տպել թվերի միջինը՝ չօգտագործելով array
+
+
+console.log("Task 12") // 12. Տրված են 3 թվեր, սորտավորել դրանք ըստ աճման կարգի
+
+var num = [3, 41, 53, 63, 7];
+var numSort = num.sort(function (a, b) {return a-b})
+console.log(numSort)
+
+console.log("Task 13") // 13. Հայտարարել 2 փոփոխական a և b, ընդ որում a > b, և տալ արժեքներ։ Ֆունկցիայի միջոցով ստանալ այդ թվերի գումարը, տարբերությունը, արտադրյալը, քանորդը, մնացորդը 
+
+
+
+function operators(a, b){
+var c = "";
+  var gumar = a + b;
+  var tarberutyun = a - b;
+  var bazmapatik = a * b;
+  var qanord = a / b;
+  var mnacord = a%b;
+
+  console.log(c+gumar + "\n" + tarberutyun+ "\n" + bazmapatik+ "\n" + qanord+ "\n" + mnacord)
+}
+  operators(8,7)
+
+  console.log("Task 14") // 14. Գրել ծրագիր, որը կասի տրված տողը polindrome-է, թե ոչ
+
+function polindrome(x){ 
+        var sum = ""
+    for(var i = x.length - 1; i >= 0; i--){
+        sum += x[i]
+    }
+    if (x === sum){
+        return "Polindrome"
+
+    }
+    return "Not"
+}
+console.log(polindrome("abba"))
+
+
+console.log("Task 15") // 14. Գրել ծրագիր, որը 
+
+function repeat (x, n){
+var sum = "";
+if (n === 0){
+    return x;
+}
+else{
+    for(i = 0; i < n; i++){
+        sum += x+" ";
+    }
+
+}
+return sum
+}
+
+console.log(repeat("hello", 3))
+
+
+
+
+</script>

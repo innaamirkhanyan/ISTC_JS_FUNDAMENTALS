@@ -1,0 +1,43 @@
+<script>
+var student = {
+homework : "task 15",
+condition : {}
+}
+
+student.when = function(){
+    return this.homework + " should be done by tomorrow"
+
+}
+console.log(student.when())
+
+//task 15 @ petqa katarvi minchev vagh@
+
+var student1 = {
+    homework : "no homework"
+}
+student1.sayCondition = student.when
+console.log(student1.sayCondition())
+
+
+// var car = {
+//    Toyota : "Blue",
+//    Mazeratti : "Green",
+//    Mercedes : "Black",
+//    Nissan : "White",
+//    Lexus : "Metallic"
+// }
+// for (var key in car) {
+//     console.log(car.hasOwnProperty(key))
+// }
+
+// var carArr = ["Toyota", 5, true, "Nissan", "Lexus"]
+// for (var key of carArr){
+//     if(carArr.hasOwnProperty(key) == car.hasOwnProperty(key)){
+//         console.log(car.key)
+//     }
+     
+//}
+// ete uni key true, ete che false
+
+
+</script>
